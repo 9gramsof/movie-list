@@ -12,9 +12,7 @@ class App extends React.Component {
     }
     this.handleUpdate = this.handleUpdate.bind(this);
   }
-
   //handleSubmit for adding a movie and search
-  //use this as a callback
   handleUpdate(newValue) {
     this.setState({value: newValue});
   }

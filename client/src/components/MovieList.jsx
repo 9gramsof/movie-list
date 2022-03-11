@@ -1,13 +1,25 @@
 import React from 'react';
 import MovieListEntry from './MovieListEntry.jsx';
 
-var MovieList = (props) => {
+var MovieList = ({movies}) => {
+
+
   return (
-    <div className="movielist">
-      {props.movies.map((movie, index) =>
+    <ul className="movielist">
+      <h2> Watched</h2>
+      <div>
+      {movies.map((movie, index) =>
         <MovieListEntry movie={movie} key={index}/>
       )}
-    </div>
+      </div>
+      <h2> to Watch</h2>
+      <div>
+      {movies.map((movie, index) =>
+        <MovieListEntry movie={movie} key={index}/>
+      )}
+      </div>
+    </ul>
+
   );
 };
 

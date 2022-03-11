@@ -3,14 +3,13 @@ import React from 'react';
 class Search extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleChange(event) = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // handleChange(event) {
   //   event.preventDefault();
-  //   const searchTerm = event.target.value
-
+  //   this.handleSubmit(event);
   // }
 
   handleSubmit(event) {
@@ -23,7 +22,7 @@ class Search extends React.Component {
           return item
         } else if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
             return item
-          }
+        }
       })
     this.props.handleUpdate(filteredItems);
   }

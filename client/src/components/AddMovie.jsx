@@ -9,7 +9,7 @@ class AddMovie extends React.Component {
   //handleSubmit for adding a movie
   handleSubmit(event) {
     event.preventDefault();
-    const movie = {title: event.target[0].value};
+    const movie = {title: event.target[0].value, watched: false};
     //add it to movieList
     const movieList = this.props.value.slice(0);
     movieList.push(movie);
